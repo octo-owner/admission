@@ -24,7 +24,7 @@ Para isto, escolha suas trilhas:
 <trilha>BackEnd</trilha>
 ------------
 -->
-## Desenvolvedor .Net FullStack
+## Desenvolvedor .Net Full-Stack
 
 ### Avaliação de Proficiência Tecnológica / Negócios
 
