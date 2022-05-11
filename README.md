@@ -28,15 +28,29 @@ Para isto, escolha suas trilhas:
 
 ### Avaliação de Proficiência Tecnológica / Negócios
 
-**IMPORTANTE:** Para a realização destas atividades, você deverá contabilizar o tempo utilizado para cada uma das partes da avaliação.
+**IMPORTANTE:** Para a realização destas atividades, você deverá **contabilizar o tempo utilizado** para cada uma das partes da avaliação.
 
-#### Parte 1: C# + Asp.Net (Core ou Framework), jQuery/JavaScript e HTML5/CSS3
+#### Parte 1: C# + Asp.Net Core, SQL Server e VueJS
 
-Criar um **CRUD** para cadastro de **Clientes (pessoas físicas e/ou jurídicas)** de uma rede de **distribuidora de bebidas**. 
-O mesmo deverá contém além dos dados pessoais/empresariais (Nome, CPF, CNPJ, RG, Inscrição Estadual, Email).
-Para cada cliente:
-* Deverá permitir a inserção de múltiplos telefones (com pelo menos ddd, numero, observacoes) e para cada telefone indicar o seu tipo (celular, residencial ou comercial).
-* Deverá permitir a inserção de múltiplos endereços (com tipo de logradouro, logradouro, numero, complemento, bairro, cidade e uf) e também indicar seu tipo (cobrança, comercial, correspondência, entrega ou residencial).
+##### Dicionário de Dados
+
+| Cliente	| Telefone | Endereco |
+|---|---|---|
+| Codigo *	| Codigo *	| Codigo * |
+| Nome *	| Tipo *	| Tipo * |
+| Tipo (Física ou Jurídica) *	| DDD * |	Logradouro * |
+| CPF / CNPJ *	| Numero *	| Numero * |
+| RG / Inscrição Estadual *	| Observacoes	| Complemento |
+| Email *	| CodigoPessoa * | Bairro * |
+| Data de Nascimento / Fundação | |	Cidade * |
+| Data de Cadastro (automático/sistema) | |	UF * |
+| | |	CEP * |
+
+##### Roteiro
+
+Criar um **CRUD** para cadastro de **Clientes (pessoas físicas e/ou jurídicas)** de uma rede de **distribuidora de bebidas** seguindo o [Dicionário de Dados](#dicionário-de-dados) definido acima, onde, para cada Cliente:
+* Deverá permitir a inserção de múltiplos telefones e para cada telefone indicar o seu tipo (celular, residencial ou comercial).
+* Deverá permitir a inserção de múltiplos endereços e para cada endereço indicar seu tipo (cobrança, comercial, correspondência, entrega ou residencial).
 
 Na tela de listagem de Clientes:
 * Deverá exibir os seguintes campos: Nome, CPF, CNPJ e Email.
@@ -45,7 +59,8 @@ Na tela de listagem de Clientes:
 * Paginação de registros
 
 _Validações:_
-1. Nome e documentos pessoais serão obrigatórios;
+1. Campos **Codigo** deverão ser **auto-numéricos**.
+1. Campos marcados com * no [Dicionário de Dados](#dicionário-de-dados) são obrigatórios;
 1. Deverá existir pelos menos um telefone e um endereço;
 1. De acordo com o tipo de cliente, aplicar as máscaras necessário nos documentos pessoais;
 
@@ -54,15 +69,14 @@ _Validações:_
 1. Validar CPF e CNPJ de acordo com a regra específica de validação de cada um.
 1. Validar Inscrição Estadual de acordo com a regra da Sefaz de SP.
 
-Ficará a critério do programador utilizar **Code First** ou **Database First** (este último deverá deixar salvo o script para
-avaliação), justifique sua escolha no email de envio da atividade.
+Ficará a critério do programador utilizar **Code First** ou **Database First** (caso escolha Database First, você deverá incluir o Script SQL de criação do Banco de Dados - tabelas, relacionamentos e etc - no projeto a ser enviado), justifique sua escolha no [email de envio da atividade](#parte-2-publicar-avaliações-no-github) .
 
 **Após o término do desenvolvimento:**
 
 Criar um script que insira cem clientes com pelo menos um telefone e um endereço e deixar salvo o script para avaliação (o conteúdo escolhido para ser inserido não será validado, poderá ser adodato qualquer critério pelo desenvolvedor, ex: inseridos cem Roberto, desde que tenha uma distinção entre eles, como Roberto, Roberto1, Roberto2 etc.).
 
 #### Parte 2: Publicar avaliações no GitHub
-Crie uma Conta no GitHub (caso já possua uma, utilize a sua), publique (sim, deixar o repositório público) as avaliações no seu GitHub e envie o link do repositório para: rh@octoti.com.br com o Assunto: _**Avaliação de Proficiência Tecnológica / Negócios**_.
+Crie uma Conta no GitHub (caso já possua uma, utilize a sua), publique (sim, deixar o repositório público) as avaliações no seu GitHub e envie o link do repositório para: rh@octoti.com.br com o Assunto: _**Vaga Desenvolvedor FullStack - Avaliação de Proficiência Tecnológica / Negócios**_.
 
-No corpo da mensagem enviar o tempo contabilizado para a realização de cada uma das partes da Avaliação, bem como a Justificativa da escolha entre Code-First e Database-First.
+No corpo da mensagem enviar o **tempo contabilizado** para a realização de cada uma das partes da Avaliação, bem como a **Justificativa** da escolha entre **Code-First** e **Database-First**.
 
